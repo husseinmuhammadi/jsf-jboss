@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+
+    </h:head>
+    <f:view>
+        <h:form>
+
+            <h:outputLabel value="Number"/>
+            <h:outputText id="dfg" value="#{ajaxTestController.index}"/>
+
+            <h:commandButton value="Increase number" action="#{ajaxTestController.increase}">
+                <f:ajax execute="@this" render="dfg"/>
+            </h:commandButton>
+
+        </h:form>
+    </f:view>
+</ui:composition>
